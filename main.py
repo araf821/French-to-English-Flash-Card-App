@@ -30,6 +30,8 @@ def generate_random():
     # Flip card to show the front of the card
     canvas.itemconfig(card_img, image=card_front_img)
 
+    global random_word
+    random_word = random.choice(dictionary)
     french_word = random_word["French"]
     canvas.itemconfig(card_title, text="French")
     canvas.itemconfig(card_word, text=french_word)
